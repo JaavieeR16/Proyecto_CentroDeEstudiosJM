@@ -34,7 +34,7 @@
         <div class="header">
             <nav>
                 <ul class="menu">
-                    <li><i class='bx bx-home-alt-2'></i><a href="paneldecontrol.php">Inicio</a></li>
+                    <li><i class='bx bx-home-alt-2'></i><a class="lugar" href="paneldecontrol.php">Inicio</a></li>
                     <li><i class='bx bx-user'></i><a href="usuarios.php">Usuarios</a></li>
                     <li><i class='bx bxs-id-card'></i><a href="registros.php">Registros</a></li>
                     <li><i class='bx bx-shield-alt-2'></i><a href="cargos.php">Cargos</a></li>
@@ -47,41 +47,119 @@
             <tr>
                 <td>
                     <div class="tarjeta1">
+                        <h1 class="titulos_cajas">Usuarios:</h1>
+                        <?php
+                        //Abro la conexión con la base de datos
+                        $enlace = mysqli_connect("localhost","root","","proyecto","3307");
 
+                        //Le piedo algo a la base de datos
+                        $peticion="SELECT COUNT(*) total FROM usuarios";
+                        $resultado = mysqli_query($enlace, $peticion);
+                        $fila = mysqli_fetch_assoc($resultado);
+
+                        //Devuelvo por pantalla lo que me da
+                        ?><h1 class="numeros_totales"><?php echo $fila['total']; ?></h1><img src="../imagenes/usuario.png">
                     </div>
                 </td>
                 <td rowspan="3">
                     <div class="tajeta_medio">
-                        <h1>Hola</h1>
+                        <img class="pruebaa" src="../imagenes/grafica 1.png">
                     </div>
                 </td>
                 <td>
                     <div class="tarjeta2">
+                        <h1 class="titulos_cajas">Registros:</h1>
+                        <?php
+                        //Abro la conexión con la base de datos
+                        $enlace = mysqli_connect("localhost","root","","proyecto","3307");
 
+                        //Le piedo algo a la base de datos
+                        $peticion="SELECT COUNT(*) total FROM registro";
+                        $resultado = mysqli_query($enlace, $peticion);
+                        $fila = mysqli_fetch_assoc($resultado);
+
+                        //Devuelvo por pantalla lo que me da
+                        ?><h1 class="numeros_totales"><?php echo $fila['total']; ?></h1><img src="../imagenes/matriculas.png">
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>
                     <div class="tarjeta3">
+                        <h1 class="titulos_cajas">Registros:</h1>
+                        <?php
+                        //Abro la conexión con la base de datos
+                        $enlace = mysqli_connect("localhost","root","","proyecto","3307");
 
+                        //Le piedo algo a la base de datos
+                        $peticion="SELECT COUNT(*) total FROM registro";
+                        $resultado = mysqli_query($enlace, $peticion);
+                        $fila = mysqli_fetch_assoc($resultado);
+
+                        //Devuelvo por pantalla lo que me da
+                        ?><h1 class="numeros_totales"><?php echo $fila['total']; ?></h1><img src="../imagenes/matriculas.png">
                     </div>
                 </td>
+                <!--<td>
+                    <div class="tajeta_medio">
+                        <img class="pruebaa" src="../imagenes/grafica3.png">
+                        <img class="pruebaa" src="../imagenes/grafica1.png">
+                    </div>
+                </td>-->
                 <td>
                     <div class="tarjeta4">
+                        <h1 class="titulos_cajas">Cargos:</h1>
+                        <?php
+                        //Abro la conexión con la base de datos
+                        $enlace = mysqli_connect("localhost","root","","proyecto","3307");
 
+                        //Le piedo algo a la base de datos
+                        $peticion="SELECT COUNT(*) total FROM cargos";
+                        $resultado = mysqli_query($enlace, $peticion);
+                        $fila = mysqli_fetch_assoc($resultado);
+
+                        //Devuelvo por pantalla lo que me da
+                        ?><h1 class="numeros_totales"><?php echo $fila['total']; ?></h1><img src="../imagenes/cargos.png">
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>
                     <div class="tarjeta5">
+                        <h1 class="titulos_cajas">Cargos:</h1>
+                        <?php
+                        //Abro la conexión con la base de datos
+                        $enlace = mysqli_connect("localhost","root","","proyecto","3307");
 
+                        //Le piedo algo a la base de datos
+                        $peticion="SELECT COUNT(*) total FROM cargos";
+                        $resultado = mysqli_query($enlace, $peticion);
+                        $fila = mysqli_fetch_assoc($resultado);
+
+                        //Devuelvo por pantalla lo que me da
+                        ?><h1 class="numeros_totales"><?php echo $fila['total']; ?></h1><img src="../imagenes/cargos.png">
                     </div>
                 </td>
+                <!--<td>
+                    <div class="tajeta_medio">
+                        <img class="pruebaa" src="../imagenes/grafica2.png">
+                        <img class="pruebaa" src="../imagenes/grafica3.png">
+                    </div>
+                </td>-->
                 <td>
                     <div class="tarjeta6">
+                        <h1 class="titulos_cajas">Usuarios:</h1>
+                        <?php
+                        //Abro la conexión con la base de datos
+                        $enlace = mysqli_connect("localhost","root","","proyecto","3307");
 
+                        //Le piedo algo a la base de datos
+                        $peticion="SELECT COUNT(*) total FROM usuarios";
+                        $resultado = mysqli_query($enlace, $peticion);
+                        $fila = mysqli_fetch_assoc($resultado);
+
+                        //Devuelvo por pantalla lo que me da
+                        ?><h1 class="numeros_totales"><?php echo $fila['total']; ?></h1><img src="../imagenes/usuario.png">
                     </div>
                 </td>
             </tr>

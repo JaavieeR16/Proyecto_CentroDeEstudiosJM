@@ -49,7 +49,6 @@
     .presentacion h1 {
         color: #fff;
         margin-left: 80px;
-        margin-top: 200px;
         font-weight: 600;
         font-size: 60px;
         letter-spacing: 1px;
@@ -193,6 +192,7 @@
     }
 
     /* ------- Estilos términos ------- */
+
     .container_terminos {
         width: 80%;
         height: 100%;
@@ -232,6 +232,12 @@
         font-size: 20px;
     }
 
+    .header nav ul li .lugar{
+        color: #f4bf04;
+        text-decoration: underline;
+    }
+
+
     .header nav ul li a{
         color: #fff;
     }
@@ -263,37 +269,27 @@
     /* ------- Estilos paneles ------- */
 
     .tabla_panel_general {
-        width: 97%;
+        width: 90%;
         margin: auto;
         margin-top: 50px;
-        border: 1px solid #000;
-    }
-
-    .tabla_panel_general tr{
-        border: 1px solid #000;
-    }
-
-    .tabla_panel_general tr td{
-        border: 1px solid #000;
     }
 
     .tarjeta1{
         width: 250px;
         height: 150px;
-        background: rebeccapurple;
+        background: rgba(14, 14, 14, 0.92);
     }
 
     .tarjeta2{
         width: 250px;
         height: 150px;
-        background: rebeccapurple;
-        margin-left: 62%;
+        background: rgba(14, 14, 14, 0.92);
     }
 
     .tarjeta3{
         width: 250px;
         height: 150px;
-        background: red;
+        background: rgba(14, 14, 14, 0.92);
         margin-top: 15px;
         margin-bottom: 15px;
     }
@@ -301,30 +297,49 @@
     .tarjeta4{
         width: 250px;
         height: 150px;
-        background: red;
+        background: rgba(14, 14, 14, 0.92);
         margin-top: 15px;
         margin-bottom: 15px;
-        margin-left: 62%;
     }
 
     .tarjeta5{
         width: 250px;
         height: 150px;
-        background: rebeccapurple;
-        margin-top: 50px;
+        background: rgba(14, 14, 14, 0.92);
     }
 
     .tarjeta6{
         width: 250px;
         height: 150px;
-        background: rebeccapurple;
-        margin-top: 50px;
-        margin-left: 62%;
+        background: rgba(14, 14, 14, 0.92);
     }
 
     .tajeta_medio{
-        background: #2f92f6;
-        width: 100%;
+        width: 200%;
+        margin-top: 120px;
+        margin-left: 50px;
+    }
+
+    .tabla_panel_general .titulos_cajas{
+        color: #fff;
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin-left: 20px;
+    }
+
+    .tabla_panel_general .numeros_totales{
+        color: #fff;
+        font-weight: 500;
+        font-size: 50px;
+        letter-spacing: 1px;
+        margin-left: 50px;
+        margin-top: 20px;
+    }
+
+    .tabla_panel_general img{
+        width: 30%;
+        margin-left: 140px;
+        margin-top: -100px;
     }
 
     /* ------- Estilos footer ------- */
@@ -396,7 +411,6 @@
 @media screen and (max-width:1920px) {
 
     /* ------- Estilos index ------- */
-
     .presentacion img {
         width: 10%;
         margin-left: 80px;
@@ -462,3 +476,4 @@
         transform: scale(1.1);
         transition: .3s;
     }
+}
