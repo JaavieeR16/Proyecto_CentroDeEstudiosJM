@@ -389,6 +389,42 @@
         font-size: 18px;
     }
 
+    .formulario_insertar_usuarios{
+        margin-top: 50px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .formulario_insertar_usuarios input[type = "text"]{
+        padding: 8px;
+        outline: none;
+        border: 1px solid grey;
+        margin: 0 20px 0 20px;
+    }
+
+    .formulario_insertar_usuarios input[type = "submit"]{
+        padding: 8px;
+        outline: none;
+        border: 1px solid grey;
+        background: #0e0e0e;
+        color: #fff;
+    }
+
+    .formulario_insertar_usuarios input[type = "submit"]:hover{
+        padding: 8px;
+        outline: none;
+        border: 1px solid grey;
+        background: #f4bf04;
+        color: #fff;
+    }
+
+    .contenido_usuarios .h3 h3  {
+        letter-spacing: 1px;
+        font-weight: 400;
+        margin-top: 40px;
+        text-align: center;
+    }
+
     /* ------- Estilos paginación ------- */
 
     .paginacion {

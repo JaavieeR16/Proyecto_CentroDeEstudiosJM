@@ -77,7 +77,7 @@
         </table>
         <hr>
         <h1 class="titulos_panelesabajo">Insertar usuario nuevo</h1>
-        <form action="insertar_usuarios.php" method="post">
+        <form class="formulario_insertar_usuarios" action="insertar_usuarios.php" method="post">
             <input type="text" name="usuario" placeholder="Usuario">
             <input type="text" name="contraseña" placeholder="Contraseña">
             <input type="text" name="id_cargo" placeholder="Cargo">
@@ -85,12 +85,9 @@
         </form>
         <hr>
         <h1 class="titulos_panelescargos">CARGOS</h1>
-        <table class="saber_cargos" cellpaddin=0 cellspacing=0>
-            <tr>
-                <th>1. Administrador</th>
-                <th>2. Alumno</th>
-            </tr>
-        </table>
+        <div class="h3">
+            <h3>1. Administrador</h3><h3>2. Alumno</h3>
+        </div>
     </div>
     <section class="paginacion">
         <ul>
