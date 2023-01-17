@@ -1,0 +1,464 @@
+/* ------- Estilos generales ------- */
+
+*{
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.body_index{
+    background-image: url(../imagenes/fondo_index.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.body_login{
+    background: #0e0e0e;
+}
+
+.body_registro{
+    background: #0e0e0e;
+}
+
+.body_terminos{
+    background: #fff;
+}
+
+.body_paneldecontrol{
+    background: #fff;
+}
+
+/* ------- Estilos responsive ------- */
+
+/* ------- 1600 x 900 ------- */
+
+@media screen and (max-width:1600px) {
+
+    /* ------- Estilos index ------- */
+
+    .presentacion img {
+        width: 10%;
+        margin-left: 80px;
+        margin-top: 40px;
+    }
+
+    .presentacion h1 {
+        color: #fff;
+        margin-left: 80px;
+        margin-top: 200px;
+        font-weight: 600;
+        font-size: 60px;
+        letter-spacing: 1px;
+    }
+
+    .presentacion h3 {
+        color: #fff;
+        margin-left: 80px;
+        font-size: 30px;
+        font-weight: 300;
+        margin-top: 20px;
+        letter-spacing: 1px;
+    }
+
+    .btn_login {
+        color: #fff;
+        margin-left: 85px;
+        font-size: 15px;
+        background: transparent;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 8px;
+        padding-right: 8px;
+        margin-top: 20px;
+        cursor: pointer;
+        letter-spacing: 1px;
+    }
+
+    .btn_login:hover {
+        transform: scale(1.1);
+        transition: .3s;
+    }
+
+    .btn_registro {
+        color: #fff;
+        margin-left: 20px;
+        font-size: 15px;
+        background: transparent;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 8px;
+        padding-right: 8px;
+        margin-top: 20px;
+        cursor: pointer;
+        letter-spacing: 1px;
+    }
+
+    .btn_registro:hover {
+        transform: scale(1.1);
+        transition: .3s;
+    }
+
+    /* ------- Estilos login y registro ------- */
+    .box {
+        width: 380px;
+        padding: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #191919;
+        text-align: center;
+    }
+
+    .box h1 {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    .box input[type = "text"], .box input[type = "password"], .box input[type = "email"] {
+        border: 0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #3498db;
+        padding: 14px 10px;
+        width: 200px;
+        outline: none;
+        color: #fff;
+        border-radius: 24px;
+        transition: 0.25s;
+    }
+
+    .box input[type = "text"]:focus, .box input[type = "password"]:focus, .box input[type = "email"]:focus {
+        width: 280px;
+        border-color: #f4bf04;
+    }
+
+    .box label {
+        color: #fff;
+        margin-bottom: 100px;
+    }
+
+    .box a {
+        color: #fff;
+        margin-top: 10px;
+    }
+
+    .box input[type = "submit"] {
+        border: 0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #f4bf04;
+        padding: 14px 40px;
+        outline: none;
+        color: #fff;
+        border-radius: 24px;
+        transition: 0.25s;
+        cursor: pointer;
+    }
+
+    .box input[type = "submit"]:hover {
+        background: #f4bf04;
+    }
+
+    .h1_validar {
+        text-align: center;
+        font-weight: 500;
+        margin-top: 350px;
+    }
+
+    .box input[type = "checkbox"] {
+        margin: 20px auto;
+        margin-right: 10px;
+    }
+
+    .box a {
+        font-size: 15px;
+    }
+
+    .box a:hover {
+        text-decoration: underline;
+    }
+
+    /* ------- Estilos términos ------- */
+    .container_terminos {
+        width: 80%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.34);
+        margin: auto;
+    }
+
+    .container_terminos header {
+        color: #000;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        padding: 10px 0 10px 0;
+        margin-bottom: 20px;
+    }
+
+    .container_terminos p {
+        color: #000;
+        font-size: 15px;
+        margin-left: 20px;
+    }
+
+    /* ------- Estilos panel de control ------- */
+
+    /* ------- Estilos menu ------- */
+
+    .header{
+        background: #0e0e0e;
+        height: 100px;
+        margin-top: -16px;
+    }
+
+    .header nav ul li{
+        list-style-type: none;
+        display: inline-block;
+        margin-top: -2px;
+        font-size: 20px;
+    }
+
+    .header nav ul li a{
+        color: #fff;
+    }
+
+    .header nav ul li a:hover{
+        color: #f4bf04;
+        text-decoration: underline;
+    }
+
+    .header nav ul li i{
+        color: #fff;
+        margin-right: 8px;
+    }
+
+    .menu li{
+        float: left;
+        padding: 35px;
+    }
+
+    .menu li a{
+        text-decoration: none;
+    }
+
+    .header img {
+        width: 6%;
+        margin-left: 550px;
+    }
+
+    /* ------- Estilos paneles ------- */
+
+    .tabla_panel_general {
+        width: 97%;
+        margin: auto;
+        margin-top: 50px;
+        border: 1px solid #000;
+    }
+
+    .tabla_panel_general tr{
+        border: 1px solid #000;
+    }
+
+    .tabla_panel_general tr td{
+        border: 1px solid #000;
+    }
+
+    .tarjeta1{
+        width: 250px;
+        height: 150px;
+        background: rebeccapurple;
+    }
+
+    .tarjeta2{
+        width: 250px;
+        height: 150px;
+        background: rebeccapurple;
+        margin-left: 62%;
+    }
+
+    .tarjeta3{
+        width: 250px;
+        height: 150px;
+        background: red;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .tarjeta4{
+        width: 250px;
+        height: 150px;
+        background: red;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 62%;
+    }
+
+    .tarjeta5{
+        width: 250px;
+        height: 150px;
+        background: rebeccapurple;
+        margin-top: 50px;
+    }
+
+    .tarjeta6{
+        width: 250px;
+        height: 150px;
+        background: rebeccapurple;
+        margin-top: 50px;
+        margin-left: 62%;
+    }
+
+    .tajeta_medio{
+        background: #2f92f6;
+        width: 100%;
+    }
+
+    /* ------- Estilos footer ------- */
+
+    footer {
+        width: 100%;
+        height: 20vh;
+        padding: 30px 0px;
+        position: relative;
+        bottom: -46px
+    }
+
+    footer hr{
+        width: 98%;
+        margin: auto;
+    }
+
+    footer div{
+        display: flex;
+        margin-left: 700px;
+    }
+
+    footer a{
+        width: 45px;
+        height: 45px;
+        display: flex;
+        float: left;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        border: 1px solid #000;
+        border-radius: 50%;
+        margin: 22px 10px;
+        color: #000;
+        text-decoration: none;
+    }
+
+    .ig:hover{
+        color: #9801fc;
+        border: 1px solid #9801fc;
+    }
+
+    .tw:hover{
+        color: #2f92f6;
+        border: 1px solid #2f92f6;
+    }
+
+    .yt:hover{
+        color: #f61313;
+        border: 1px solid #f61313;
+    }
+
+    .gh:hover{
+        color: #939393;
+        border: 1px solid #939393;
+    }
+
+    footer h5{
+        color: #000;
+        margin-left: 600px;
+        margin-top: 10px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+}
+
+/* ------- 1920 x 1080 ------- */
+
+@media screen and (max-width:1920px) {
+
+    /* ------- Estilos index ------- */
+
+    .presentacion img {
+        width: 10%;
+        margin-left: 80px;
+        margin-top: 40px;
+    }
+
+    .presentacion h1 {
+        color: #fff;
+        margin-left: 80px;
+        margin-top: 350px;
+        font-weight: 600;
+        font-size: 60px;
+        letter-spacing: 1px;
+    }
+
+    .presentacion h3 {
+        color: #fff;
+        margin-left: 80px;
+        font-size: 30px;
+        font-weight: 300;
+        margin-top: 20px;
+        letter-spacing: 1px;
+    }
+
+    .btn_login {
+        color: #fff;
+        margin-left: 85px;
+        font-size: 15px;
+        background: transparent;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 8px;
+        padding-right: 8px;
+        margin-top: 20px;
+        cursor: pointer;
+        letter-spacing: 1px;
+    }
+
+    .btn_login:hover {
+        transform: scale(1.1);
+        transition: .3s;
+    }
+
+    .btn_registro {
+        color: #fff;
+        margin-left: 20px;
+        font-size: 15px;
+        background: transparent;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 8px;
+        padding-right: 8px;
+        margin-top: 20px;
+        cursor: pointer;
+        letter-spacing: 1px;
+    }
+
+    .btn_registro:hover {
+        transform: scale(1.1);
+        transition: .3s;
+    }
