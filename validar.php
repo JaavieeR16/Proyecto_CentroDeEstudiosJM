@@ -2,8 +2,8 @@
     include ("conexiondb.php");
     error_reporting(0);
 
-    $usuario = mysqli_real_escape_string($enlace,$_POST['usuario']);
-    $contraseña = md5(mysqli_real_escape_string($enlace, $_POST['contraseña']));
+    $usuario = ($_POST['usuario']);
+    $contraseña = ($_POST['contraseña']);
     session_start();
     $_SESSION['usuario']=$usuario;
 

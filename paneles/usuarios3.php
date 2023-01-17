@@ -59,27 +59,28 @@
             $conex = mysqli_connect("localhost","root","","proyecto","3307");
 
             //Le piedo algo a la base de datos
-            $peticion="SELECT * FROM usuarios LIMIT 0, 15";
+            $peticion="SELECT * FROM usuarios LIMIT 20, 33";
             $resultado = mysqli_query($conex,$peticion);
 
             //Devuelvo por pantalla
             while ($fila = $resultado->fetch_assoc()) {
                 echo '<tr>
-                                <td>'.$fila['identificador'].'</td>
-                                <td>'.$fila['usuario'].'</td>
-                                <td>'.$fila['contraseña'].'</td>
-                                <td>'.$fila['id_cargo'].'</td>
-                                <td><a href="actualizar_usuarios.php?id='.$fila['id'].'"><i class="bx bx-pencil"></i></a></td>
-                                <td><a href="eliminar_usuarios.php?id='.$fila['id'].'"><i class="bx bx-trash"></i></a></td>
-                            </tr>';
+                                        <td>'.$fila['identificador'].'</td>
+                                        <td>'.$fila['usuario'].'</td>
+                                        <td>'.$fila['contraseña'].'</td>
+                                        <td>'.$fila['id_cargo'].'</td>
+                                        <td><a href="actualizar_usuarios.php?id='.$fila['id'].'"><i class="bx bx-pencil"></i></a></td>
+                                        <td><a href="eliminar_usuarios.php?id='.$fila['id'].'"><i class="bx bx-trash"></i></a></td>
+                                    </tr>';
             }
             ?>
         </table>
     </div>
     <section class="paginacion">
         <ul>
-            <li><a href="usuarios.php" class="active">1</a></li>
+            <li><a href="usuarios.php">1</a></li>
             <li><a href="usuarios2.php">2</a></li>
+            <li><a href="usuarios3.php" class="active">3</a></li>
         </ul>
     </section>
     <footer>

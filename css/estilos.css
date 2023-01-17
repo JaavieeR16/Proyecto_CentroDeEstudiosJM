@@ -266,7 +266,7 @@
         margin-left: 550px;
     }
 
-    /* ------- Estilos paneles ------- */
+    /* ------- Estilos panel general ------- */
 
     .tabla_panel_general {
         width: 90%;
@@ -340,6 +340,89 @@
         width: 30%;
         margin-left: 140px;
         margin-top: -100px;
+    }
+
+    /* ------- Estilos panel usuarios ------- */
+
+    .contenido_usuarios h1{
+        text-align: center;
+        justify-content: center;
+        letter-spacing: 1px;
+        font-weight: 400;
+        margin-top: 20px;
+    }
+
+    .contenido_usuarios hr{
+        width: 98%;
+        margin: auto;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+
+    .tabla_usuarios{
+        margin: auto;
+        width: 80%;
+    }
+
+    .tabla_usuarios tr:nth-child(odd) {
+        background: rgb(220, 220, 220);
+        padding: 5px;
+    }
+
+    .tabla_usuarios tr th{
+        font-size: 20px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .tabla_usuarios i{
+        color: #000;
+    }
+
+    .tabla_usuarios i:hover{
+        color: #f4bf04;
+    }
+
+    .tabla_usuarios tr td{
+        padding: 5px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    /* ------- Estilos paginación ------- */
+
+    .paginacion {
+        margin-top: 40px;
+        margin-bottom: -60px;
+    }
+
+    .paginacion ul {
+        list-style:none;
+        text-align: center;
+        margin-left: 30px;
+    }
+
+    .paginacion ul li {
+        display:inline-block;
+        margin: 22px 10px;
+    }
+
+    .paginacion ul li a {
+        display:block;
+        padding:10px 20px;
+        color:#fff;
+        background:#0e0e0e;
+        text-decoration: none;
+        border-radius: 50%;
+    }
+
+    .paginacion ul li a:hover {
+        background:#f4bf04;
+    }
+
+    .paginacion ul li .active {
+        background:#f4bf04;
+        font-weight:bold;
     }
 
     /* ------- Estilos footer ------- */

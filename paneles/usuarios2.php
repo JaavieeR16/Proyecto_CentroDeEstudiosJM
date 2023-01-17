@@ -59,27 +59,43 @@
             $conex = mysqli_connect("localhost","root","","proyecto","3307");
 
             //Le piedo algo a la base de datos
-            $peticion="SELECT * FROM usuarios LIMIT 0, 15";
+            $peticion="SELECT * FROM usuarios  LIMIT 15, 33";
             $resultado = mysqli_query($conex,$peticion);
 
             //Devuelvo por pantalla
             while ($fila = $resultado->fetch_assoc()) {
                 echo '<tr>
-                                <td>'.$fila['identificador'].'</td>
-                                <td>'.$fila['usuario'].'</td>
-                                <td>'.$fila['contraseña'].'</td>
-                                <td>'.$fila['id_cargo'].'</td>
-                                <td><a href="actualizar_usuarios.php?id='.$fila['id'].'"><i class="bx bx-pencil"></i></a></td>
-                                <td><a href="eliminar_usuarios.php?id='.$fila['id'].'"><i class="bx bx-trash"></i></a></td>
-                            </tr>';
+                                    <td>'.$fila['identificador'].'</td>
+                                    <td>'.$fila['usuario'].'</td>
+                                    <td>'.$fila['contraseña'].'</td>
+                                    <td>'.$fila['id_cargo'].'</td>
+                                    <td><a href="actualizar_usuarios.php?id='.$fila['id'].'"><i class="bx bx-pencil"></i></a></td>
+                                    <td><a href="eliminar_usuarios.php?id='.$fila['id'].'"><i class="bx bx-trash"></i></a></td>
+                                </tr>';
             }
             ?>
+        </table>
+        <hr>
+        <h1 class="titulos_panelesabajo">Insertar usuario nuevo</h1>
+        <form action="insertar_usuarios.php" method="post">
+            <input type="text" name="usuario" placeholder="Usuario">
+            <input type="text" name="contraseña" placeholder="Contraseña">
+            <input type="text" name="id_cargo" placeholder="Cargo">
+            <input type="submit" name="añadir" value="Añadir">
+        </form>
+        <hr>
+        <h1 class="titulos_panelescargos">CARGOS</h1>
+        <table class="saber_cargos" cellpaddin=0 cellspacing=0>
+            <tr>
+                <th>1. Administrador</th>
+                <th>2. Alumno</th>
+            </tr>
         </table>
     </div>
     <section class="paginacion">
         <ul>
-            <li><a href="usuarios.php" class="active">1</a></li>
-            <li><a href="usuarios2.php">2</a></li>
+            <li><a href="usuarios.php">1</a></li>
+            <li><a href="usuarios2.php" class="active">2</a></li>
         </ul>
     </section>
     <footer>
