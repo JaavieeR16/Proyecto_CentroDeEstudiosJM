@@ -59,7 +59,7 @@
             $conex = mysqli_connect("localhost","root","","proyecto","3307");
 
             //Le piedo algo a la base de datos
-            $peticion="SELECT * FROM usuarios  LIMIT 15, 33";
+            $peticion="SELECT * FROM usuarios  LIMIT 15,50";
             $resultado = mysqli_query($conex,$peticion);
 
             //Devuelvo por pantalla
@@ -70,14 +70,14 @@
                                     <td>'.$fila['contraseña'].'</td>
                                     <td>'.$fila['id_cargo'].'</td>
                                     <td><a href="actualizar_usuarios.php?id='.$fila['id'].'"><i class="bx bx-pencil"></i></a></td>
-                                    <td><a href="eliminar_usuarios.php?id='.$fila['id'].'"><i class="bx bx-trash"></i></a></td>
+                                    <td><a href="../acciones/eliminar_usuarios.php?id='.$fila['identificador'].'"><i class="bx bx-trash"></i></a></td>
                                 </tr>';
             }
             ?>
         </table>
         <hr>
         <h1 class="titulos_panelesabajo">Insertar usuario nuevo</h1>
-        <form class="formulario_insertar_usuarios" action="insertar_usuarios.php" method="post">
+        <form class="formulario_insertar_usuarios" action="../acciones/insertar_usuarios.php" method="post">
             <input type="text" name="usuario" placeholder="Usuario">
             <input type="text" name="contraseña" placeholder="Contraseña">
             <input type="text" name="id_cargo" placeholder="Cargo">

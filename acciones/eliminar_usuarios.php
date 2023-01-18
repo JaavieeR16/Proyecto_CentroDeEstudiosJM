@@ -1,10 +1,11 @@
 <?php
-    include ("conexiondb.php");
+    include ("../conexiondb.php");
 
-    $peticion = "DELETE FROM usuarios WHERE id = ".$_GET['id']."";
+    $peticion = "DELETE FROM usuarios WHERE identidicador = ". $_GET["id"];
 
-    mysqli_query($enlace,$peticion);
+    echo "$peticion";
 
-    echo "Eliminando usuario, espere...";
-    echo '<meta http-equiv="refresh" content="2; url=paneldecontrol.php">';
+    //mysqli_query($enlace,$peticion);
+
+    echo '<meta http-equiv="refresh" content="0; url=../paneles/usuarios2.php">';
 ?>

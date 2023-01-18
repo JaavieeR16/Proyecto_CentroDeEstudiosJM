@@ -62,7 +62,7 @@
                     </div>
                 </td>
                 <td rowspan="3">
-                    <div class="tajeta_medio">
+                    <div class="tarjeta_medio">
                         <img class="pruebaa" src="../imagenes/grafica 1.png">
                     </div>
                 </td>
@@ -100,12 +100,6 @@
                         ?><h1 class="numeros_totales"><?php echo $fila['total']; ?></h1><img src="../imagenes/matriculas.png">
                     </div>
                 </td>
-                <!--<td>
-                    <div class="tajeta_medio">
-                        <img class="pruebaa" src="../imagenes/grafica3.png">
-                        <img class="pruebaa" src="../imagenes/grafica1.png">
-                    </div>
-                </td>-->
                 <td>
                     <div class="tarjeta4">
                         <h1 class="titulos_cajas">Cargos:</h1>
@@ -140,12 +134,6 @@
                         ?><h1 class="numeros_totales"><?php echo $fila['total']; ?></h1><img src="../imagenes/cargos.png">
                     </div>
                 </td>
-                <!--<td>
-                    <div class="tajeta_medio">
-                        <img class="pruebaa" src="../imagenes/grafica2.png">
-                        <img class="pruebaa" src="../imagenes/grafica3.png">
-                    </div>
-                </td>-->
                 <td>
                     <div class="tarjeta6">
                         <h1 class="titulos_cajas">Usuarios:</h1>
