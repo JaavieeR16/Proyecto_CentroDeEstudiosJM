@@ -60,28 +60,37 @@
             $conex = mysqli_connect("localhost","root","","proyecto","3307");
 
             //Le piedo algo a la base de datos
-            $peticion="SELECT * FROM registro LIMIT 0, 15";
+            $peticion="SELECT * FROM registro LIMIT 15, 50";
             $resultado = mysqli_query($conex,$peticion);
 
             //Devuelvo por pantalla
             while ($fila = $resultado->fetch_assoc()) {
                 echo '<tr>
-                                <td>'.$fila['identificador'].'</td>
-                                <td>'.$fila['usuario'].'</td>
-                                <td>'.$fila['contraseña'].'</td>
-                                <td>'.$fila['email'].'</td>
-                                <td>'.$fila['telefono'].'</td>
-                                <td><a href="actualizar_usuarios.php?id='.$fila['id'].'"><i class="bx bx-pencil"></i></a></td>
-                                <td><a href="../acciones/eliminar_usuarios.php?id='.$fila['id'].'"><i class="bx bx-trash"></i></a></td>
-                            </tr>';
+                                    <td>'.$fila['identificador'].'</td>
+                                    <td>'.$fila['usuario'].'</td>
+                                    <td>'.$fila['contraseña'].'</td>
+                                    <td>'.$fila['email'].'</td>
+                                    <td>'.$fila['telefono'].'</td>
+                                    <td><a href="actualizar_usuarios.php?id='.$fila['id'].'"><i class="bx bx-pencil"></i></a></td>
+                                    <td><a href="../acciones/eliminar_usuarios.php?id='.$fila['id'].'"><i class="bx bx-trash"></i></a></td>
+                                </tr>';
             }
             ?>
         </table>
+        <hr>
+        <h1 class="titulos_panelesabajo">Insertar nuevo registro</h1>
+        <form class="formulario_insertar_usuarios" action="../acciones/insertar_registros.php" method="post">
+            <input type="text" name="usuario" placeholder="Usuario">
+            <input type="text" name="contraseña" placeholder="Contraseña">
+            <input type="text" name="email" placeholder="Email">
+            <input type="text" name="telefono" placeholder="Teléfono">
+            <input type="submit" name="añadir" value="Añadir">
+        </form>
     </div>
     <section class="paginacion">
         <ul>
-            <li><a href="registros.php" class="active">1</a></li>
-            <li><a href="registros2.php">2</a></li>
+            <li><a href="registros.php">1</a></li>
+            <li><a href="registros2.php" class="active">2</a></li>
         </ul>
     </section>
     <footer>
