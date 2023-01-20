@@ -1,6 +1,6 @@
 <?php
     error_reporting(0);
-    include ("conexiondb.php");
+    include ("../conexiondb.php");
 
     //seguridad de sesiones paginación.
     session_start();
@@ -10,6 +10,13 @@
         echo 'No tienes autorización para entrar en esta página.';
         die();
     }
+
+    $identificador = $_GET['identificador'];
+
+    $consulta = "SELECT * FROM usuarios WHERE identificador = '$identificador'";
+    $resultado = mysqli_query($enlace, $consulta);
+
+    $row = mysqli_fetch_array($resultado);
 ?>
 
 <!doctype html>
@@ -34,48 +41,24 @@
     <div class="header">
         <nav>
             <ul class="menu">
-                <li><i class='bx bx-home-alt-2'></i><a href="paneldecontrol.php">Inicio</a></li>
-                <li><i class='bx bx-user'></i><a href="usuarios.php">Usuarios</a></li>
-                <li><i class='bx bxs-id-card'></i><a href="registros.php">Registros</a></li>
-                <li><i class='bx bx-shield-alt-2'></i><a class="lugar" href="cargos.php">Cargos</a></li>
+                <li><i class='bx bx-home-alt-2'></i><a href="../paneles/paneldecontrol.php">Inicio</a></li>
+                <li><i class='bx bx-user'></i><a class="lugar" href="../paneles/usuarios.php">Usuarios</a></li>
+                <li><i class='bx bxs-id-card'></i><a href="../paneles/registros.php">Registros</a></li>
+                <li><i class='bx bx-shield-alt-2'></i><a href="../paneles/cargos.php">Cargos</a></li>
                 <li><i class='bx bx-log-out'></i><a href="../cerrar_sesion.php">Cerrar Sesión</a></li>
             </ul>
         </nav>
         <img src="../logos/logo_blanco.png">
     </div>
     <div class="contenido_usuarios">
-        <h1>Gestión de cargos</h1>
+        <h1>Actualizar usuarios</h1>
         <hr>
-        <table class="tabla_usuarios" cellpaddin=0 cellspacing=0>
-            <tr>
-                <th>Identificador</th>
-                <th>Cargos</th>
-                <th colspan="2">Acciones</th>
-            </tr>
-            <?php
-            //Abro la conexión con la base de datos
-            $conex = mysqli_connect("localhost","root","","proyecto","3307");
-
-            //Le piedo algo a la base de datos
-            $peticion="SELECT * FROM cargos";
-            $resultado = mysqli_query($conex,$peticion);
-
-            //Devuelvo por pantalla
-            while ($fila = $resultado->fetch_assoc()) {
-                echo '<tr>
-                                        <td>'.$fila['identificador'].'</td>
-                                        <td>'.$fila['cargo'].'</td>
-                                        <td><a href="../acciones/actualizar_cargos.php?identificador='.$fila['identificador'].'"><i class="bx bx-pencil"></i></a></td>
-                                        <td><a href="../acciones/eliminar_cargos.php?identificador='.$fila['identificador'].'"><i class="bx bx-trash"></i></a></td>
-                                    </tr>';
-            }
-            ?>
-        </table>
-        <hr>
-        <h1 class="titulos_panelesabajo">Insertar nuevo cargo</h1>
-        <form class="formulario_insertar_usuarios" action="../acciones/insertar_cargo.php" method="post">
-            <input type="text" name="cargo" placeholder="Cargo">
-            <input type="submit" name="añadir" value="Añadir">
+        <form class="formulario_insertar_usuarios" action="update_usuarios.php" method="post">
+            <input type="hidden" name="identificador" value="<?php echo $row['identificador'] ?>">
+            <input type="text" name="usuario" placeholder="Usuario" value="<?php echo $row['usuario'] ?>">
+            <input type="text" name="contraseña" placeholder="Contraseña" value="<?php echo $row['contraseña'] ?>">
+            <input type="text" name="id_cargo" placeholder="Cargo" value="<?php echo $row['id_cargo'] ?>">
+            <input type="submit" name="actualizar" value="Actualizar">
         </form>
     </div>
     <footer>

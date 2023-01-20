@@ -71,8 +71,8 @@
                                 <td>'.$fila['contraseña'].'</td>
                                 <td>'.$fila['email'].'</td>
                                 <td>'.$fila['telefono'].'</td>
-                                <td><a href="actualizar_usuarios.php?id='.$fila['id'].'"><i class="bx bx-pencil"></i></a></td>
-                                <td><a href="../acciones/eliminar_usuarios.php?id='.$fila['id'].'"><i class="bx bx-trash"></i></a></td>
+                                <td><a href="../acciones/actualizar_registros.php?identificador='.$fila['identificador'].'"><i class="bx bx-pencil"></i></a></td>
+                                <td><a href="../acciones/eliminar_registros.php?identificador='.$fila['identificador'].'"><i class="bx bx-trash"></i></a></td>
                             </tr>';
             }
             ?>
