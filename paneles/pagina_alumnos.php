@@ -1,5 +1,5 @@
 <?php
-    $conex = mysqli_connect("localhost","root","","proyectoad","3307");
+    $conex = mysqli_connect("localhost","root","@Mislata.2022","proyecto","3306");
     //seguridad de sesiones paginación.
     session_start();
     error_reporting(0);
@@ -31,16 +31,74 @@
                 <div class="header">
                     <nav>
                         <ul class="menu">
-                            <li><i class='bx bx-home-alt-2'></i><a class="lugar" href="paneldecontrol.php">Inicio</a></li>
-                            <li><i class='bx bx-user'></i><a href="cuenta_usuario.php">Mi Cuenta</a></li>
+                            <li><i class='bx bx-home-alt-2'></i><a class="lugar" href="pagina_alumnos.php">Inicio</a></li>
+                            <li><i class='bx bx-user'></i><a href="#">Mi Cuenta</a></li>
                             <li><i class='bx bx-news'></i><a href="#">Noticias</a></li>
                             <li><i class='bx bxs-contact' ></i><a href="#">Contacto</a></li>
                             <li><i class='bx bx-log-out'></i><a href="../cerrar_sesion.php">Cerrar Sesión</a></li>
                         </ul>
                     </nav>
                     <img src="../logos/logo_blanco.png">
+                    <div class="contenido_alumnos">
+                        <h1>Desarrollo de Aplicaciones Multiplataforma</h1>
+                        <hr>
+                        <table class="tabla_alumnos">
+                            <tr>
+                                <th>
+                                    <a href="#">Acceso a Datos</a>
+                                <th>
+                                    <a href="#">Programación Multimedia</a>
+                                </th>
+                                <th>
+                                    <a href="#">Desarrollo de Interfaces</a>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#"><img src="../imagenes/asignaturas.jpg"></a>
+                                </td>
+                                <td>
+                                    <a href="#"><img src="../imagenes/asignaturas.jpg"></a>
+                                </td>
+                                <td>
+                                    <a href="#"><img src="../imagenes/asignaturas.jpg"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <a href="#">Programación de Servicios y Procesos</a>
+                                </th>
+                                <th>
+                                    <a href="#">Sistema de Gestión Empresarial</a>
+                                </th>
+                                <th>
+                                    <a href="#">Inglés Técnico</a>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#"><img src="../imagenes/asignaturas.jpg"></a>
+                                </td>
+                                <td>
+                                    <a href="#"><img src="../imagenes/asignaturas.jpg"></a>
+                                </td>
+                                <td>
+                                    <a href="#"><img src="../imagenes/asignaturas.jpg"></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <footer>
+                        <hr>
+                        <div>
+                            <a class="ig" href="https://www.instagram.com/jaavieer16/?hl=es" target="_blank"><i class='bx bxl-instagram'></i></a>
+                            <a class="tw" href="https://twitter.com/jaavieer_16/" target="_blank"><i class='bx bxl-twitter' ></i></a>
+                            <a class="yt" href="https://www.youtube.com/channel/UC-IvM1PWGZehbZUn3ZrCtiA" target="_blank"><i class='bx bxl-youtube' ></i></a>
+                            <a class="gh" href="https://github.com/JaavieeR16" target="_blank"><i class='bx bxl-github' ></i></a>
+                        </div>
+                        <h5>Todos los derechos reservados © 2023 -2024 Javier Monroy Muñoz</h5>
+                    </footer>
                 </div>
-
             </body>
         </html>
 

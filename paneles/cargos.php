@@ -54,7 +54,7 @@
             </tr>
             <?php
             //Abro la conexión con la base de datos
-            $conex = mysqli_connect("localhost","root","","proyecto","3307");
+            $conex = mysqli_connect("localhost","root","@Mislata.2022","proyecto","3306");
 
             //Le piedo algo a la base de datos
             $peticion="SELECT * FROM cargos";

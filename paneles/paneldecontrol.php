@@ -50,7 +50,7 @@
                         <h1 class="titulos_cajas">Usuarios:</h1>
                         <?php
                         //Abro la conexión con la base de datos
-                        $enlace = mysqli_connect("localhost","root","","proyecto","3307");
+                        $enlace = mysqli_connect("localhost","root","@Mislata.2022","proyecto","3306");
 
                         //Le piedo algo a la base de datos
                         $peticion="SELECT COUNT(*) total FROM usuarios";
@@ -71,7 +71,7 @@
                         <h1 class="titulos_cajas">Registros:</h1>
                         <?php
                         //Abro la conexión con la base de datos
-                        $enlace = mysqli_connect("localhost","root","","proyecto","3307");
+                        $enlace = mysqli_connect("localhost","root","@Mislata.2022","proyecto","3306");
 
                         //Le piedo algo a la base de datos
                         $peticion="SELECT COUNT(*) total FROM registro";
@@ -89,7 +89,7 @@
                         <h1 class="titulos_cajas">Registros:</h1>
                         <?php
                         //Abro la conexión con la base de datos
-                        $enlace = mysqli_connect("localhost","root","","proyecto","3307");
+                        $enlace = mysqli_connect("localhost","root","@Mislata.2022","proyecto","3306");
 
                         //Le piedo algo a la base de datos
                         $peticion="SELECT COUNT(*) total FROM registro";
@@ -105,7 +105,7 @@
                         <h1 class="titulos_cajas">Cargos:</h1>
                         <?php
                         //Abro la conexión con la base de datos
-                        $enlace = mysqli_connect("localhost","root","","proyecto","3307");
+                        $enlace = mysqli_connect("localhost","root","@Mislata.2022","proyecto","3306");
 
                         //Le piedo algo a la base de datos
                         $peticion="SELECT COUNT(*) total FROM cargos";
@@ -123,7 +123,7 @@
                         <h1 class="titulos_cajas">Cargos:</h1>
                         <?php
                         //Abro la conexión con la base de datos
-                        $enlace = mysqli_connect("localhost","root","","proyecto","3307");
+                        $enlace = mysqli_connect("localhost","root","@Mislata.2022","proyecto","3306");
 
                         //Le piedo algo a la base de datos
                         $peticion="SELECT COUNT(*) total FROM cargos";
@@ -139,7 +139,7 @@
                         <h1 class="titulos_cajas">Usuarios:</h1>
                         <?php
                         //Abro la conexión con la base de datos
-                        $enlace = mysqli_connect("localhost","root","","proyecto","3307");
+                        $enlace = mysqli_connect("localhost","root","@Mislata.2022","proyecto","3306");
 
                         //Le piedo algo a la base de datos
                         $peticion="SELECT COUNT(*) total FROM usuarios";

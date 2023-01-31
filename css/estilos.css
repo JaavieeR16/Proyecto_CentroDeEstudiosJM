@@ -1024,4 +1024,52 @@
         font-weight: 500;
     }
 
+    /* ------- Estilos panel de alumnos ------- */
+
+    .contenido_alumnos h1{
+        text-align: center;
+        justify-content: center;
+        letter-spacing: 1px;
+        font-weight: 400;
+        margin-top: 40px;
+    }
+
+    .contenido_alumnos hr{
+        width: 98%;
+        margin: auto;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+
+    .tabla_alumnos{
+        margin: auto;
+        width: 90%;
+    }
+
+    .tabla_alumnos th{
+        text-align: center;
+        font-size: 22px;
+        font-weight: 600;
+        padding: 20px;
+    }
+
+    .tabla_alumnos a{
+        text-decoration: none;
+        color: #000;
+    }
+
+    .tabla_alumnos a:hover{
+        text-decoration: underline;
+    }
+
+    .tabla_alumnos td{
+        margin-top: 20px;
+    }
+
+    .tabla_alumnos img{
+        width: 90%;
+        margin-left: 20px;
+        margin-bottom: 50px;
+    }
+
 }
